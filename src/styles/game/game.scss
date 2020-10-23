@@ -25,6 +25,10 @@ $darkblue: #007FEB;
         cursor: none;
         flex: 3;
         outline: 1px solid red;
+
+        &--cursor {
+            cursor: default;
+        }
     }
 
     &__ui {
@@ -80,6 +84,10 @@ $darkblue: #007FEB;
 
         &--clicked {
             animation: wack 150ms ease forwards;
+        }
+
+        &--disabled {
+            display: none;
         }
     }
 }

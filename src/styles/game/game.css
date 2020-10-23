@@ -30,6 +30,10 @@
   outline: 1px solid red;
 }
 
+.game__main--cursor {
+  cursor: default;
+}
+
 .game__ui {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -108,6 +112,10 @@
 .game__wacker--clicked {
   -webkit-animation: wack 150ms ease forwards;
           animation: wack 150ms ease forwards;
+}
+
+.game__wacker--disabled {
+  display: none;
 }
 
 @-webkit-keyframes wack {
