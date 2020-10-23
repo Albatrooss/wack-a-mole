@@ -1,0 +1,136 @@
+.main-game {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.game {
+  width: 100%;
+  max-width: 1366px;
+  height: 768px;
+  border: 1px solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.game__main {
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  outline: 1px solid red;
+}
+
+.game__ui {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+.game__score {
+  font-size: 4em;
+  color: #2699FB;
+}
+
+.game__btn-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game__btn-list__item {
+  margin: 20px;
+}
+
+.game__btn-list__item div {
+  background-color: #2699FB;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 10px;
+  width: 125px;
+}
+
+.game__btn-list__item div.game__new-game-btn {
+  width: 150px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.game__wacker {
+  width: 100px;
+  height: 100px;
+  background-color: #95989A;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.game__wacker--clicked {
+  -webkit-animation: wack 150ms ease forwards;
+          animation: wack 150ms ease forwards;
+}
+
+@-webkit-keyframes wack {
+  0% {
+    background-color: #95989A;
+  }
+  50% {
+    background-color: #ff0000;
+  }
+  100% {
+    background-color: #2699FB;
+  }
+}
+
+@keyframes wack {
+  0% {
+    background-color: #95989A;
+  }
+  50% {
+    background-color: #ff0000;
+  }
+  100% {
+    background-color: #2699FB;
+  }
+}
+/*# sourceMappingURL=game.css.map */

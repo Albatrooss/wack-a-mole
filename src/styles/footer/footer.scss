@@ -1,0 +1,57 @@
+$red: #ff0000;
+$grey: #95989A;
+$blue: #2699FB;
+
+footer {
+    background-color: $blue;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+
+    .footer {
+        width: 100%;
+        max-width: var(--max-width);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__descr,
+        &__link {
+            display: block;
+            color: white;
+            text-align: center;
+        }
+
+        &__descr {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        &__hire {
+            flex: 4;
+            &-me {
+                color: white;
+                font-weight: 400;
+                font-size: 2em;
+                text-align: center;
+            }
+        }
+
+        &__col {
+            flex: 2;
+            &--list {
+                display: flex;
+                list-style: none;
+            }
+        }
+
+        &__item {
+            margin-left: 20px;
+        }
+
+        &__logo {
+            width: 20px;
+        }   
+    }
+}

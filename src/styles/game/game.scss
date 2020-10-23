@@ -1,0 +1,97 @@
+$red: #ff0000;
+$grey: #95989A;
+$blue: #2699FB;
+$darkblue: #007FEB;
+
+.main-game {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.game {
+    width: 100%;
+    max-width: 1366px;
+    height: 768px;
+    border: 1px solid grey;
+    
+    display: flex;
+    
+    &__main {
+        position: relative;
+        overflow: hidden;
+        cursor: none;
+        flex: 3;
+        outline: 1px solid red;
+    }
+
+    &__ui {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    &__score {
+        font-size: 4em;
+        color: $blue;
+    }
+
+    &__btn-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__item {
+            margin: 20px;
+            
+            & div {
+                background-color: $blue;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 10px;
+                width: 125px;
+
+                &.game__new-game-btn {
+                    width: 150px;
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &__wacker {
+        width: 100px;
+        height: 100px;
+        background-color: $grey;
+        pointer-events: none;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &--clicked {
+            animation: wack 150ms ease forwards;
+        }
+    }
+}
+
+@keyframes wack {
+    0% {
+        background-color: $grey
+    }
+    50% {
+        background-color: $red
+    }
+    100% {
+        background-color: $blue
+    }
+}
