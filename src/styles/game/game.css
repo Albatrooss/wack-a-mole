@@ -28,6 +28,13 @@
       -ms-flex: 3;
           flex: 3;
   outline: 1px solid red;
+  padding: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
 }
 
 .game__main--cursor {
@@ -116,6 +123,21 @@
 
 .game__wacker--disabled {
   display: none;
+}
+
+.mole-square {
+  position: relative;
+  opacity: 0;
+}
+
+.mole-square--showing {
+  opacity: 1;
+}
+
+.mole-square__img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 @-webkit-keyframes wack {

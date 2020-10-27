@@ -26,6 +26,11 @@ $darkblue: #007FEB;
         flex: 3;
         outline: 1px solid red;
 
+        padding: 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
         &--cursor {
             cursor: default;
         }
@@ -89,6 +94,22 @@ $darkblue: #007FEB;
         &--disabled {
             display: none;
         }
+    }
+}
+
+.mole-square {
+    // outline: 1px solid red;
+    position: relative;
+    opacity: 0;
+
+    &--showing {
+        opacity: 1;
+    }
+
+    &__img {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 }
 

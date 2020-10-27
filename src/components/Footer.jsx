@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <div className="footer">
         <div className="footer__col">
-          <p className="footer__descr">Made for a Mintbeam Hac-a-Thon</p>
+          <p className="footer__descr">Made for a Mintbeam Hack-a-Thon</p>
           <a href="https://www.mintbean.io/" target="_blank" className="footer__link">mintbeam.io</a>
         </div>
         <div className="footer__col">
