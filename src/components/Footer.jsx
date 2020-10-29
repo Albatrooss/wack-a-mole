@@ -18,8 +18,8 @@ export default function Footer() {
 
         </div>
         <ul className="footer__col--list">
-          <li className="footer__item"><a href="#" className="footer__link"><img className="footer__logo" src="logos/my-github.svg" alt="github-logo" /></a></li>
-          <li className="footer__item"><a href="#" className="footer__link"><img className="footer__logo" src="logos/my-linkedin.svg" alt="github-logo" /></a></li>
+          <li className="footer__item"><a href="https://github.com/Albatrooss" className="footer__link"><img className="footer__logo" src="logos/my-github.svg" alt="github-logo" /></a></li>
+          <li className="footer__item"><a href="https://www.linkedin.com/in/tim-robillard/" className="footer__link"><img className="footer__logo" src="logos/my-linkedin.svg" alt="github-logo" /></a></li>
         </ul>
       </div>
     </footer>

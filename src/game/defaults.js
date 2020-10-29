@@ -85,3 +85,9 @@ export const difficultyArr = [
   'Medium',
   'Hard'
 ]
+
+export const difficultySpeeds = [500, 400, 300]
+
+export const wackerList = ['wacker-brown0', 'silver-hammer-', 'ray-gun0'];
+
+export const soundList = ['wack01', 'hammer01', 'laser02'];

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 export default function Timer({ timesUp, handleTimesUp, muted, gameOn }) {
 
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(20);
 
   let tickerId;
 
@@ -10,9 +10,9 @@ export default function Timer({ timesUp, handleTimesUp, muted, gameOn }) {
     if (timesUp || timer < 1 || !gameOn) return;
     if (timer === 1) handleTimesUp()
     if (!muted) {
-      if (timer > 4) {
+      if (timer > 1) {
         new Audio('sounds/beep4.wav').play();
-      } else {
+      } else if (timer < 4) {
         new Audio('sounds/beep1.wav').play();
       }
     }

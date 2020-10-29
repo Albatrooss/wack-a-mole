@@ -14,6 +14,7 @@ $darkblue: #007FEB;
     position: fixed;
     top:0;
     left: 0;
+    z-index: 50;
 }
 
 .tutorial {
@@ -49,10 +50,11 @@ $darkblue: #007FEB;
 
     &__card {
         width: 33.33%;
-        height: 400px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
 
         &__title,
         &__description {
@@ -63,6 +65,11 @@ $darkblue: #007FEB;
 
         &__title {
             font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        & img {
+            width: 50%;
         }
     }
 

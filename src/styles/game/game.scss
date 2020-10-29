@@ -1,5 +1,6 @@
 $red: #ff0000;
 $grey: #95989A;
+$lightblue: #a7d6ff;
 $blue: #2699FB;
 $darkblue: #007FEB;
 
@@ -14,7 +15,7 @@ $darkblue: #007FEB;
 .game {
     width: 100%;
     max-width: 1366px;
-    height: 768px;
+    height: 85vh;
     border: 1px solid grey;
     
     display: flex;
@@ -59,48 +60,102 @@ $darkblue: #007FEB;
         &__item {
             margin: 20px;
             
-            & div {
-                background-color: $blue;
-                color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 15px 10px;
-                width: 125px;
-
-                &.game__new-game-btn {
-                    width: 150px;
-                    font-size: 24px;
-                    font-weight: 500;
-                }
+            & h4 {
+                text-align: center;
+                margin-bottom: 10px;
             }
         }
     }
 
+    &__btn {
+        background-color: white;
+        border: 2px solid $blue;
+        border-right: none;
+        color: $blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 15px;
+        cursor: pointer;
+        float: left;
+
+        &:hover {
+            background-color: $lightblue;
+        }
+
+        &__brown,
+        &__purple {
+            width: 12px;
+            height: 18px;
+            background-color: burlywood;
+            outline: 1px solid white;
+        }
+
+        &__purple {
+            background-color: rgb(185, 19, 185);
+        }
+
+        &:last-child {
+            border-right: 2px solid $blue;
+        }
+        
+        &--current,
+        &--new-game {
+            background-color: $blue;
+            color: white;
+
+            &:hover {
+                background-color: $darkblue;
+                color: white;
+            }
+        }
+
+
+
+        &--new-game {
+            width: 150px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
     &__wacker {
-        width: 100px;
-        height: 100px;
-        background-color: $grey;
+        width: 200px;
+        height: 200px;
         pointer-events: none;
 
         position: absolute;
         top: 0;
         left: 0;
 
+
+        z-index: 20;
+        // opacity: 0;
+
         &--clicked {
-            animation: wack 150ms ease forwards;
+            opacity: 1;
         }
 
         &--disabled {
             display: none;
         }
+
+        & img {
+            width: 100%;
+        }
     }
+}
+
+.wacker__icon {
+    width: 60px;
 }
 
 .mole-square {
     // outline: 1px solid red;
+
+    background-color: #009933;
     position: relative;
-    opacity: 0;
+    opacity: 1;
 
     &--showing {
         opacity: 1;
@@ -110,6 +165,7 @@ $darkblue: #007FEB;
         width: 100%;
         position: absolute;
         bottom: 0;
+        pointer-events: none;
     }
 }
 

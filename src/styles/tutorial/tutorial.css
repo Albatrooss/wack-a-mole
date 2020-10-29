@@ -13,6 +13,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 50;
 }
 
 .tutorial {
@@ -52,7 +53,7 @@
 
 .tutorial__card {
   width: 33.33%;
-  height: 400px;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,6 +64,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .tutorial__card__title, .tutorial__card__description {
@@ -73,6 +77,11 @@
 
 .tutorial__card__title {
   font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.tutorial__card img {
+  width: 50%;
 }
 
 .tutorial__left-indicator, .tutorial__right-indicator {

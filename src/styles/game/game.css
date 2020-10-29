@@ -13,7 +13,7 @@
 .game {
   width: 100%;
   max-width: 1366px;
-  height: 768px;
+  height: 85vh;
   border: 1px solid grey;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,9 +84,16 @@
   margin: 20px;
 }
 
-.game__btn-list__item div {
-  background-color: #2699FB;
-  color: white;
+.game__btn-list__item h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.game__btn {
+  background-color: white;
+  border: 2px solid #2699FB;
+  border-right: none;
+  color: #2699FB;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,38 +103,76 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px 10px;
-  width: 125px;
+  padding: 20px 15px;
+  cursor: pointer;
+  float: left;
 }
 
-.game__btn-list__item div.game__new-game-btn {
+.game__btn:hover {
+  background-color: #a7d6ff;
+}
+
+.game__btn__brown, .game__btn__purple {
+  width: 12px;
+  height: 18px;
+  background-color: burlywood;
+  outline: 1px solid white;
+}
+
+.game__btn__purple {
+  background-color: #b913b9;
+}
+
+.game__btn:last-child {
+  border-right: 2px solid #2699FB;
+}
+
+.game__btn--current, .game__btn--new-game {
+  background-color: #2699FB;
+  color: white;
+}
+
+.game__btn--current:hover, .game__btn--new-game:hover {
+  background-color: #007FEB;
+  color: white;
+}
+
+.game__btn--new-game {
   width: 150px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .game__wacker {
-  width: 100px;
-  height: 100px;
-  background-color: #95989A;
+  width: 200px;
+  height: 200px;
   pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 20;
 }
 
 .game__wacker--clicked {
-  -webkit-animation: wack 150ms ease forwards;
-          animation: wack 150ms ease forwards;
+  opacity: 1;
 }
 
 .game__wacker--disabled {
   display: none;
 }
 
+.game__wacker img {
+  width: 100%;
+}
+
+.wacker__icon {
+  width: 60px;
+}
+
 .mole-square {
+  background-color: #009933;
   position: relative;
-  opacity: 0;
+  opacity: 1;
 }
 
 .mole-square--showing {
@@ -138,6 +183,7 @@
   width: 100%;
   position: absolute;
   bottom: 0;
+  pointer-events: none;
 }
 
 @-webkit-keyframes wack {
