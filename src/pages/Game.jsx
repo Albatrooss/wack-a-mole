@@ -103,6 +103,10 @@ export default function Game({ highScore, newHighScore }) {
       document.addEventListener('mousedown', e => setClicked(true));
       document.addEventListener('mouseup', e => setClicked(false));
     }
+    for (let i = 0; i < 60; i++) {
+      let img1 = new Image().src = `images/mole-fram0${`0${i}`.slice(-2)}.png`
+      let img2 = new Image().src = `images/mole-purple${`0${i}`.slice(-2)}.png`
+    }
   }, [])
 
   useEffect(() => {
